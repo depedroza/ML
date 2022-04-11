@@ -1,4 +1,3 @@
-from typing import ChainMap
 from sklearn.datasets import load_digits
 
 digits = load_digits()
