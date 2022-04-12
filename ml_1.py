@@ -43,6 +43,7 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier()
 
 knn.fit(X=data_train, y=target_train)
+# x is all the features or input, Y is the target value or the output that the features represent
 
 predicted = knn.predict(X=data_test)
 # whole job of the predict is to give a target answer, so that is why we do not need a y
