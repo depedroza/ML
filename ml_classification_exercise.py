@@ -37,21 +37,21 @@ print(expected[:20])
 print(iris.data.shape)
 print(iris.target.shape)
 print(iris.target_names.shape)
-"""
+
 # display the first 10 predicted and expected results using
 # the species names not the number (using target_names)
-data_train, data_test, target_train, target_test = train_test_split(
-    iris.data, iris.target
-)
 
-knn2 = KNeighborsClassifier()
-knn2.fit(X=data_train, y=target_train)
-
-predicted = knn2.predict(X=data_test)
+predicted = knn.predict(X=data_test)
 expected = target_test
-print(predicted[:10])
-print(expected[:10])
-"""
+
+targets = [0, 1, 2]
+mapping = {y: x for x, y in zip(iris.target_names, targets)}
+
+print(mapping)
+
+for p, e in zip(predicted[:10], expected[:10]):
+    print(f"predicted: {mapping[p]}, expected: {mapping[e]}")
+
 
 # display the values that the model got wrong
 wrong = [(x, y) for (x, y) in zip(predicted, expected) if x != y]
