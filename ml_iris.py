@@ -30,8 +30,8 @@ knn.fit(X=data_train, y=target_train)
 
 predicted = knn.predict(X=data_test)
 expected = target_test
-print(predicted[:20])
-print(expected[:20])
+print(predicted)
+print(expected)
 
 # display the shape of the data, target and target_names
 print(iris.data.shape)
